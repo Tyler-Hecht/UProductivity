@@ -84,12 +84,12 @@ def req_fulfilled(how_to_fulfill: dict, courses_taken: list) -> bool:
     if not how_to_fulfill["special case?"]:
         credits = 0
         # adds up the credits from courses taken
-        for key, value in how_to_fulfill["acceptable courses"].items():
-            if key in courses_taken:
-                credits += value
+        for course in how_to_fulfill["acceptable courses"]:
+            if course in courses_taken:
+                credits += courses_taken[course]
         # returns whether or not enough credits have been taken
         return credits >= how_to_fulfill["credits"]
-    # if it's a sequence
+    # if it's a sequence requirement
     elif how_to_fulfill["special case?"] == "sequence":
         # considers each sequence
         for sequence in how_to_fulfill["acceptable courses"]:
@@ -103,7 +103,7 @@ def req_fulfilled(how_to_fulfill: dict, courses_taken: list) -> bool:
                 return True
         # if no sequence is completed
         return False
-    #if it's elective requirements
+    #if it's an electives requirement
     elif how_to_fulfill["special case?"] == "electives":
         # get the total amount of credits taken
         credits = 0
