@@ -35,5 +35,6 @@
     "FINC312": {"acceptable courses": {"FINC312": 3}, "credits": 3, "special case?": null},
     "CISC106": {"acceptable courses": {"CISC106": 3}, "credits": 3, "special case?": null},
     "CISC181": {"acceptable courses": {"CISC181": 3}, "credits": 3, "special case?": null},
-    "MISY330": {"acceptable courses": {"MISY330": 3}, "credits": 3, "special case?": null}
+    "MISY330": {"acceptable courses": {"MISY330": 3}, "credits": 3, "special case?": null},
+    "Electives": {"acceptable courses": null, "credits": 124, "special case?": "electives"}
 }

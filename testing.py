@@ -29,28 +29,28 @@ with open('ACSC.json') as data_file:
 
 
 # main function
-def check_requirements(courses: list, reqs: dict) -> str:
+def check_requirements(courses_taken: dict, reqs: dict) -> str:
     """
     This function checks whether or not the requirements for a major are fulfilled
 
     Args:
-        courses ([str]): A list of strings representing the courses on the planned schedule
-        reqs {str: dict}: A dictionary containing requirements and the courses that can fulfill
+        courses (dict): A dictionary representing the courses on the planned schedule (course
+            name and credits)
+        reqs (dict): A dictionary containing requirements and the courses that can fulfill
             the requirement (as well as their details)
     Returns:
         str: An message indicating whether or the requirements are fulfilled by the planned courses
             and what requirements must still be fulfilled, if any
     """
+
     # the missing courses will be listed here
     missing = []
     # a boolean which represents whether or not the requirements are fulfilled
     fulfilled = True
-
     # iterates over the dictionary of requirements using both the key and value
     for key, value in reqs.items():
         # determines whether or not a requirement is fulfilled
-        if not req_fulfilled(value, courses):
-            # if set(acceptable_courses).isdisjoint(courses):
+        if not req_fulfilled(value, courses_taken):
             # if it isn't fulfilled, make fulfilled false (permanently) and add the requirement to the list
             fulfilled = False
             missing.append(key)
@@ -103,7 +103,17 @@ def req_fulfilled(how_to_fulfill: dict, courses_taken: list) -> bool:
                 return True
         # if no sequence is completed
         return False
+    #if it's elective requirements
+    elif how_to_fulfill["special case?"] == "electives":
+        # get the total amount of credits taken
+        credits = 0
+        for course in courses_taken:
+            credits += courses_taken[course]
+        # if enough credits have been taken
+        return credits >= how_to_fulfill["credits"]
+
 
 
 # test the code
-print(check_requirements(["CISC106", "ACCT207", "MATH350", "MATH450", "A1", "A4", "B2", "B3"], acsc_reqs))
+courses_taken = {"CISC106": 3, "ACCT207": 3, "MATH350": 3, "MATH450": 3, "A1": 3, "A4": 3, "B2": 3, "B3": 3}
+print(check_requirements(courses_taken, acsc_reqs))
