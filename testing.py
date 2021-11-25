@@ -3,8 +3,7 @@ import json
 """
 This program tests a function that checks whether or not the requirements
 for a major are fulfilled. The Actuarial Sciences (ACSC) major is used for
-the test. Currently, the ACSC major is simplified to just the computational
-cluster: https://catalog.udel.edu/preview_program.php?catoid=47&poid=34542
+the test. https://catalog.udel.edu/preview_program.php?catoid=47&poid=34542
 """
 
 """
