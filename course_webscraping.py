@@ -44,6 +44,11 @@ for i in range(1, 47):
         course_elements = a.text.split()
         course_code = course_elements[0]
         course_num = course_elements[1]
+        title = course_elements[3:]
+        course_title = ""
+        for word in title:
+            course_title = course_title + " " + word
+        course_title = course_title[1:]
 
         # Finds the link to the course page to find the number of credits
         link = find_course.find('a', href=True).get('href')
@@ -63,7 +68,7 @@ for i in range(1, 47):
         num_credits = int(refined[credits_position + 1][0])
 
         # Adds the course information to the courses dictionary
-        courses[course_code].append({"num:": course_num, "credits": num_credits})
+        courses[course_code].append({"num:": course_num, "credits": num_credits, "title": course_title})
 
 # Storing the courses dictionary on the json file
 with open(json_file, 'w') as file_object:
