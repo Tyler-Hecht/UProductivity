@@ -66,12 +66,15 @@ for i in range(1, 47):
                 if word == 'Credit(s):':
                     credits_position = position
         num_credits = []
-        if refined[credits_position + 1][1] == "-":
-            min = int(refined[credits_position + 1][0])
-            max = int(refined[credits_position + 1][2])
-            num_credits = list(range(min,max+1))
-        else:
-            num_credits.append(int(refined[credits_position + 1][0]))
+        try:
+            if refined[credits_position + 1][1] == "-":
+                min = int(refined[credits_position + 1][0])
+                max = int(refined[credits_position + 1][2])
+                num_credits = list(range(min,max+1))
+            else:
+                num_credits.append(int(refined[credits_position + 1][0]))
+        except:
+           num_credits.append(int(refined[credits_position + 1][0])) 
 
         # Adds the course information to the courses dictionary
         courses[course_code].append({"num:": course_num, "credits": num_credits, "title": course_title})
