@@ -49,6 +49,16 @@ for i in range(1, 47):
         for word in title:
             course_title = course_title + " " + word
         course_title = course_title[1:]
+        
+        # Fixes the error with apostrophe
+        if "’" in course_title:
+            apostrophe_position = None
+            position = 0
+            for char in course_title:
+                if char == "’":
+                    apostrophe_position = position
+                position += 1
+            course_title = course_title[0:apostrophe_position] + "'" + course_title[apostrophe_position + 1:]
 
         # Finds the link to the course page to find the number of credits
         link = find_course.find('a', href=True).get('href')
