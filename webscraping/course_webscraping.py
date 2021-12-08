@@ -35,8 +35,8 @@ for i in range(1, 47):
 
     soup = BeautifulSoup(page.content, "html.parser")
 
-    # Iterates through each course on the courses page to find the course prefix (code), course number, and number
-    # of credits
+    # Iterates through each course on the courses page to find the course prefix (code), course number, course title
+    # and number of credits
     find_courses = soup.find_all("td", class_="width")
 
     for find_course in find_courses:
@@ -49,7 +49,7 @@ for i in range(1, 47):
         for word in title:
             course_title = course_title + " " + word
         course_title = course_title[1:]
-        
+
         # Fixes the error with apostrophe
         if "’" in course_title:
             apostrophe_position = None
@@ -69,25 +69,27 @@ for i in range(1, 47):
         # Finds the number of credits on the course page
         find_credits = new_soup.find_all("p")
         refined = find_credits[1].text.split()
+
         found = False
         credits_position = None
         for position, word in enumerate(refined):
             if not found:
                 if word == 'Credit(s):':
                     credits_position = position
+                    found = True
         num_credits = []
         try:
             if refined[credits_position + 1][1] == "-":
                 min = int(refined[credits_position + 1][0])
                 max = int(refined[credits_position + 1][2])
-                num_credits = list(range(min,max+1))
+                num_credits = list(range(min, max + 1))
             else:
                 num_credits.append(int(refined[credits_position + 1][0]))
         except:
-           num_credits.append(int(refined[credits_position + 1][0])) 
+            num_credits.append(int(refined[credits_position + 1][0]))
 
         # Adds the course information to the courses dictionary
-        courses[course_code].append({"num:": course_num, "credits": num_credits, "title": course_title})
+        courses[course_code].append({"num": course_num, "credits": num_credits, "title": course_title})
 
 # Storing the courses dictionary on the json file
 with open(json_file, 'w') as file_object:
