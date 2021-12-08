@@ -1,0 +1,82 @@
+import requests
+from bs4 import BeautifulSoup
+import json
+
+# Webscraping for Group A: Creative Arts and Humanities Breadth
+url = "https://catalog.udel.edu/preview_program.php?catoid=40&poid=29494"
+page = requests.get(url)
+soup = BeautifulSoup(page.content, "html.parser")
+
+find_courses = soup.find_all("li", class_="acalog-course")
+
+a_courses = []
+
+for course in find_courses:
+    course = course.text.split()
+    course = course[0] + " " + course[1]
+    a_courses.append(course)
+
+
+# Webscraping for Group B: History and Cultural Change Breadth
+url = "https://catalog.udel.edu/preview_program.php?catoid=40&poid=29495"
+page = requests.get(url)
+soup = BeautifulSoup(page.content, "html.parser")
+
+find_courses = soup.find_all("li", class_="acalog-course")
+
+b_courses = []
+
+for course in find_courses:
+    course = course.text.split()
+    course = course[0] + " " + course[1]
+    b_courses.append(course)
+
+# Webscraping for Group C: Social and Behavioral Sciences Breadth
+url = "https://catalog.udel.edu/preview_program.php?catoid=40&poid=29498"
+page = requests.get(url)
+soup = BeautifulSoup(page.content, "html.parser")
+
+find_courses = soup.find_all("li", class_="acalog-course")
+
+c_courses = []
+
+for course in find_courses:
+    course = course.text.split()
+    course = course[0] + " " + course[1]
+    c_courses.append(course)
+
+# Webscraping for Group D: Mathematics, Natural Sciences, and Technology Breadth
+url = "https://catalog.udel.edu/preview_program.php?catoid=40&poid=29499"
+page = requests.get(url)
+soup = BeautifulSoup(page.content, "html.parser")
+
+find_courses = soup.find_all("li", class_="acalog-course")
+
+d_courses = []
+
+for course in find_courses:
+    course = course.text.split()
+    course = course[0] + " " + course[1]
+    d_courses.append(course)
+
+
+with open('courses.json', 'r+') as file:
+    data = json.load(file)
+
+for prefix in data:
+    courses = data[prefix]
+    for course in courses:
+        course_code = prefix + " " + course["num"]
+        if course_code in a_courses:
+            course["group"] = "A"
+        elif course_code in b_courses:
+            course["group"] = "B"
+        elif course_code in c_courses:
+            course["group"] = "C"
+        elif course_code in d_courses:
+            course["group"] = "D"
+        else:
+            course["group"] = None
+
+with open("courses.json", 'w') as file_object:
+    file_object.write(json.dumps(data, indent=2))
