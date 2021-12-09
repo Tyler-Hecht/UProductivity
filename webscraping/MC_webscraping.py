@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import json
 
 # Getting the html for the Multicultural approved courses
-url = "https://catalog.udel.edu/preview_program.php?catoid=40&poid=29592"
+url = "https://catalog.udel.edu/preview_program.php?catoid=47&poid=34918"
 page = requests.get(url)
 soup = BeautifulSoup(page.content, "html.parser")
 
