@@ -20,14 +20,12 @@ for course in find_courses:
 # Opens the courses.json file and adds a dictionary indicating whether the class is a dle class
 with open('courses.json', 'r+') as file:
     data = json.load(file)
-for prefix in data:
-    courses = data[prefix]
-    for course in courses:
-        course_code = prefix + " " + course["num"]
-        if course_code in dle_courses:
-            course["dle"] = True
-        else:
-            course["dle"] = False
+
+for course in data:
+    if course in dle_courses:
+        data[course]["dle"] = True
+    else:
+        data[course]["dle"] = False
 
 with open("courses.json", 'w') as file_object:
     file_object.write(json.dumps(data, indent=2))
