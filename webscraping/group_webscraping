@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import json
 
 # Webscraping for Group A: Creative Arts and Humanities Breadth
-url = "https://catalog.udel.edu/preview_program.php?catoid=40&poid=29494"
+url = "https://catalog.udel.edu/preview_program.php?catoid=47&poid=34821"
 page = requests.get(url)
 soup = BeautifulSoup(page.content, "html.parser")
 
@@ -18,7 +18,7 @@ for course in find_courses:
 
 
 # Webscraping for Group B: History and Cultural Change Breadth
-url = "https://catalog.udel.edu/preview_program.php?catoid=40&poid=29495"
+url = "https://catalog.udel.edu/preview_program.php?catoid=47&poid=34822"
 page = requests.get(url)
 soup = BeautifulSoup(page.content, "html.parser")
 
@@ -32,7 +32,7 @@ for course in find_courses:
     b_courses.append(course)
 
 # Webscraping for Group C: Social and Behavioral Sciences Breadth
-url = "https://catalog.udel.edu/preview_program.php?catoid=40&poid=29498"
+url = "https://catalog.udel.edu/preview_program.php?catoid=47&poid=34825"
 page = requests.get(url)
 soup = BeautifulSoup(page.content, "html.parser")
 
@@ -46,7 +46,7 @@ for course in find_courses:
     c_courses.append(course)
 
 # Webscraping for Group D: Mathematics, Natural Sciences, and Technology Breadth
-url = "https://catalog.udel.edu/preview_program.php?catoid=40&poid=29499"
+url = "https://catalog.udel.edu/preview_program.php?catoid=47&poid=34826"
 page = requests.get(url)
 soup = BeautifulSoup(page.content, "html.parser")
 
