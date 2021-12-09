@@ -20,14 +20,12 @@ for course in find_courses:
 # Opens the courses.json file and adds a dictionary indicating whether the class is a multicultural class
 with open('courses.json', 'r+') as file:
     data = json.load(file)
-for prefix in data:
-    courses = data[prefix]
-    for course in courses:
-        course_code = prefix + " " + course["num"]
-        if course_code in mc_courses:
-            course["multicultural"] = True
-        else:
-            course["multicultural"] = False
+
+for course in data:
+    if course in mc_courses:
+        data[course]["multicultural"] = True
+    else:
+        data[course]["multicultural"] = False
 
 with open("courses.json", 'w') as file_object:
     file_object.write(json.dumps(data, indent=2))
