@@ -1092,10 +1092,10 @@
       3
     ],
     "title": "Special Topics: Re(de)constructing AfroLatinx Intersections",
-    "group": null,
+    "group": "B",
     "dle": false,
     "fys": false,
-    "multicultural": false,
+    "multicultural": true,
     "capstone": false
   },
   "AFRA 203": {
@@ -1474,10 +1474,10 @@
       3
     ],
     "title": "International Black Design - 20th Century to Now",
-    "group": null,
+    "group": "A",
     "dle": false,
     "fys": false,
-    "multicultural": false,
+    "multicultural": true,
     "capstone": false
   },
   "AFRA 315": {
@@ -1496,7 +1496,7 @@
       3
     ],
     "title": "Feminism(s) and Fashion in the African Diaspora",
-    "group": null,
+    "group": "A",
     "dle": false,
     "fys": false,
     "multicultural": true,
@@ -1518,7 +1518,7 @@
       3
     ],
     "title": "Black Women and Popular Culture",
-    "group": null,
+    "group": "C",
     "dle": false,
     "fys": false,
     "multicultural": true,
@@ -1584,10 +1584,10 @@
       3
     ],
     "title": "Black Women's History to 1865",
-    "group": null,
+    "group": "B",
     "dle": false,
     "fys": false,
-    "multicultural": false,
+    "multicultural": true,
     "capstone": false
   },
   "AFRA 330": {
@@ -1639,10 +1639,10 @@
       3
     ],
     "title": "Black Women's History Since 1865",
-    "group": null,
+    "group": "B",
     "dle": false,
     "fys": false,
-    "multicultural": false,
+    "multicultural": true,
     "capstone": false
   },
   "AFRA 335": {
@@ -1771,10 +1771,10 @@
       3
     ],
     "title": "Maroons and Marronage in the Atlantic World",
-    "group": null,
+    "group": "B",
     "dle": false,
     "fys": false,
-    "multicultural": false,
+    "multicultural": true,
     "capstone": false
   },
   "AFRA 363": {
@@ -1946,7 +1946,7 @@
       3
     ],
     "title": "Special Topics: Readings in Black Text, Anti-Text, and Juxta-Text",
-    "group": null,
+    "group": "B",
     "dle": false,
     "fys": false,
     "multicultural": false,
@@ -2067,10 +2067,10 @@
       3
     ],
     "title": "Interventions in Black Gender History",
-    "group": null,
+    "group": "B",
     "dle": false,
     "fys": false,
-    "multicultural": false,
+    "multicultural": true,
     "capstone": false
   },
   "AFRA 436": {
@@ -2139,10 +2139,10 @@
       3
     ],
     "title": "The Black Portrait",
-    "group": null,
+    "group": "A",
     "dle": false,
     "fys": false,
-    "multicultural": false,
+    "multicultural": true,
     "capstone": false
   },
   "AFRA 443": {
@@ -2183,10 +2183,10 @@
       3
     ],
     "title": "On the Run: Slavery and Fugitivity in Delaware",
-    "group": null,
-    "dle": false,
+    "group": "B",
+    "dle": true,
     "fys": false,
-    "multicultural": false,
+    "multicultural": true,
     "capstone": false
   },
   "AFRA 447": {
@@ -2293,10 +2293,10 @@
       3
     ],
     "title": "Religion and Social Justice",
-    "group": null,
+    "group": "B",
     "dle": false,
     "fys": false,
-    "multicultural": false,
+    "multicultural": true,
     "capstone": false
   },
   "AFRA 490": {
@@ -3593,7 +3593,7 @@
       3
     ],
     "title": "Evolutionary Medicine",
-    "group": null,
+    "group": "D",
     "dle": false,
     "fys": false,
     "multicultural": false,
@@ -3604,7 +3604,7 @@
       3
     ],
     "title": "Medical Anthropology",
-    "group": "D",
+    "group": "C",
     "dle": false,
     "fys": false,
     "multicultural": false,
@@ -3615,7 +3615,7 @@
       3
     ],
     "title": "Culture, Society, and Global Health",
-    "group": null,
+    "group": "C",
     "dle": false,
     "fys": false,
     "multicultural": false,
@@ -3626,7 +3626,7 @@
       3
     ],
     "title": "Culture, Health & Environment",
-    "group": "D",
+    "group": "C",
     "dle": false,
     "fys": false,
     "multicultural": false,
@@ -3783,7 +3783,7 @@
     "group": "B",
     "dle": false,
     "fys": false,
-    "multicultural": false,
+    "multicultural": true,
     "capstone": false
   },
   "ANTH 326": {
@@ -3824,7 +3824,7 @@
       3
     ],
     "title": "Global Environmental Sustainability",
-    "group": null,
+    "group": "C",
     "dle": false,
     "fys": false,
     "multicultural": false,
@@ -3978,7 +3978,7 @@
       3
     ],
     "title": "Culture, Law, and Human Rights",
-    "group": null,
+    "group": "C",
     "dle": false,
     "fys": false,
     "multicultural": false,
@@ -4164,7 +4164,7 @@
       3
     ],
     "title": "Environment and Human Health",
-    "group": null,
+    "group": "D",
     "dle": false,
     "fys": false,
     "multicultural": false,
@@ -5406,7 +5406,7 @@
       3
     ],
     "title": "Documentary Photography",
-    "group": null,
+    "group": "A",
     "dle": false,
     "fys": false,
     "multicultural": false,
@@ -6347,7 +6347,7 @@
       3
     ],
     "title": "World Architecture",
-    "group": "A",
+    "group": "B",
     "dle": false,
     "fys": false,
     "multicultural": true,
@@ -6511,7 +6511,7 @@
     "group": "B",
     "dle": false,
     "fys": false,
-    "multicultural": false,
+    "multicultural": true,
     "capstone": false
   },
   "ARTH 213": {
@@ -6654,7 +6654,7 @@
     "group": "B",
     "dle": false,
     "fys": false,
-    "multicultural": false,
+    "multicultural": true,
     "capstone": false
   },
   "ARTH 236": {
@@ -6795,7 +6795,7 @@
     ],
     "title": "Art History Sophomore Internship",
     "group": null,
-    "dle": false,
+    "dle": true,
     "fys": false,
     "multicultural": false,
     "capstone": false
@@ -7010,10 +7010,10 @@
       3
     ],
     "title": "World Heritage Sites: Art, Architecture, Material Culture",
-    "group": null,
+    "group": "A",
     "dle": false,
     "fys": false,
-    "multicultural": false,
+    "multicultural": true,
     "capstone": false
   },
   "ARTH 325": {
@@ -7032,10 +7032,10 @@
       3
     ],
     "title": "Art and Archaeology of Asia",
-    "group": null,
+    "group": "A",
     "dle": false,
     "fys": false,
-    "multicultural": false,
+    "multicultural": true,
     "capstone": false
   },
   "ARTH 333": {
@@ -7043,10 +7043,10 @@
       3
     ],
     "title": "Art of Asia in the Age of Exploration",
-    "group": null,
+    "group": "A",
     "dle": false,
     "fys": false,
-    "multicultural": false,
+    "multicultural": true,
     "capstone": false
   },
   "ARTH 334": {
@@ -7065,7 +7065,7 @@
       3
     ],
     "title": "Ancient Egypt and Nubia",
-    "group": null,
+    "group": "B",
     "dle": false,
     "fys": false,
     "multicultural": false,
@@ -7099,7 +7099,7 @@
     ],
     "title": "Museum Careers and ARTH-Internship Preparation",
     "group": null,
-    "dle": false,
+    "dle": true,
     "fys": false,
     "multicultural": false,
     "capstone": false
@@ -7172,7 +7172,7 @@
       3
     ],
     "title": "Seminar in Art of African Diaspora",
-    "group": null,
+    "group": "A",
     "dle": false,
     "fys": false,
     "multicultural": false,
@@ -7353,7 +7353,7 @@
     "dle": false,
     "fys": false,
     "multicultural": false,
-    "capstone": false
+    "capstone": true
   },
   "ARTH 435": {
     "credits": [],
@@ -7380,10 +7380,10 @@
       3
     ],
     "title": "Seminar in African American Art",
-    "group": null,
+    "group": "A",
     "dle": false,
     "fys": false,
-    "multicultural": false,
+    "multicultural": true,
     "capstone": false
   },
   "ARTH 445": {
@@ -7510,7 +7510,7 @@
     "title": "FYS: Strategies for Academic Success",
     "group": null,
     "dle": false,
-    "fys": false,
+    "fys": true,
     "multicultural": false,
     "capstone": false
   },
@@ -10535,7 +10535,7 @@
     ],
     "title": "Consulting and Project Management",
     "group": null,
-    "dle": false,
+    "dle": true,
     "fys": false,
     "multicultural": false,
     "capstone": false
@@ -10926,10 +10926,10 @@
       3
     ],
     "title": "Disability Studies: A Multidisciplinary Introduction",
-    "group": null,
+    "group": "B",
     "dle": false,
     "fys": false,
-    "multicultural": false,
+    "multicultural": true,
     "capstone": false
   },
   "DIST 266": {
@@ -11490,7 +11490,7 @@
       4
     ],
     "title": "General Chemistry For Life Sciences I",
-    "group": "D",
+    "group": null,
     "dle": false,
     "fys": false,
     "multicultural": false,
@@ -11501,7 +11501,7 @@
       4
     ],
     "title": "General Chemistry for Life Sciences II",
-    "group": "D",
+    "group": null,
     "dle": false,
     "fys": false,
     "multicultural": false,
@@ -14347,7 +14347,7 @@
       3
     ],
     "title": "Introduction to Organizational Communication",
-    "group": null,
+    "group": "C",
     "dle": false,
     "fys": false,
     "multicultural": false,
@@ -14358,7 +14358,7 @@
       3
     ],
     "title": "Communication and Interpersonal Behavior",
-    "group": null,
+    "group": "C",
     "dle": false,
     "fys": false,
     "multicultural": false,
@@ -14380,7 +14380,7 @@
       3
     ],
     "title": "Philosophy of Communication",
-    "group": "C",
+    "group": "A",
     "dle": false,
     "fys": false,
     "multicultural": false,
@@ -15003,7 +15003,7 @@
     "dle": false,
     "fys": false,
     "multicultural": false,
-    "capstone": false
+    "capstone": true
   },
   "COMM 453": {
     "credits": [
@@ -15014,7 +15014,7 @@
     "dle": false,
     "fys": false,
     "multicultural": false,
-    "capstone": false
+    "capstone": true
   },
   "COMM 454": {
     "credits": [
@@ -15036,7 +15036,7 @@
     "dle": false,
     "fys": false,
     "multicultural": false,
-    "capstone": false
+    "capstone": true
   },
   "COMM 458": {
     "credits": [
@@ -15103,7 +15103,7 @@
     "dle": false,
     "fys": false,
     "multicultural": false,
-    "capstone": false
+    "capstone": true
   },
   "COMM 485": {
     "credits": [
@@ -18877,7 +18877,7 @@
       3
     ],
     "title": "Electricity from Sunlight",
-    "group": null,
+    "group": "D",
     "dle": false,
     "fys": false,
     "multicultural": false,
@@ -20213,7 +20213,7 @@
       3
     ],
     "title": "Introduction to Writing for Games",
-    "group": null,
+    "group": "A",
     "dle": false,
     "fys": false,
     "multicultural": false,
@@ -20517,7 +20517,7 @@
       3
     ],
     "title": "Studies in Film",
-    "group": null,
+    "group": "A",
     "dle": false,
     "fys": false,
     "multicultural": false,
@@ -20627,7 +20627,7 @@
       3
     ],
     "title": "Studies in Victorian Literature",
-    "group": null,
+    "group": "A",
     "dle": false,
     "fys": false,
     "multicultural": false,
@@ -20835,7 +20835,7 @@
       3
     ],
     "title": "Studies in Literature and Science",
-    "group": null,
+    "group": "B",
     "dle": false,
     "fys": false,
     "multicultural": false,
@@ -20868,7 +20868,7 @@
       3
     ],
     "title": "Studies in Drama",
-    "group": null,
+    "group": "A",
     "dle": false,
     "fys": false,
     "multicultural": false,
@@ -20890,7 +20890,7 @@
       3
     ],
     "title": "Studies in Writing and Rhetoric",
-    "group": null,
+    "group": "A",
     "dle": false,
     "fys": false,
     "multicultural": false,
@@ -20934,7 +20934,7 @@
       3
     ],
     "title": "Women in Literature",
-    "group": null,
+    "group": "B",
     "dle": false,
     "fys": false,
     "multicultural": true,
@@ -21738,7 +21738,7 @@
     ],
     "title": "Insect Research Methods",
     "group": null,
-    "dle": false,
+    "dle": true,
     "fys": false,
     "multicultural": false,
     "capstone": false
@@ -22150,7 +22150,7 @@
       3
     ],
     "title": "Foundations of Design and Fabrication",
-    "group": null,
+    "group": "D",
     "dle": false,
     "fys": false,
     "multicultural": false,
@@ -22161,7 +22161,7 @@
       3
     ],
     "title": "Individual Leadership - Building a Foundation for Success",
-    "group": null,
+    "group": "C",
     "dle": false,
     "fys": false,
     "multicultural": false,
@@ -22254,7 +22254,7 @@
       3
     ],
     "title": "Creativity and Design Thinking",
-    "group": null,
+    "group": "A",
     "dle": false,
     "fys": false,
     "multicultural": false,
@@ -22394,7 +22394,7 @@
     "dle": true,
     "fys": false,
     "multicultural": false,
-    "capstone": false
+    "capstone": true
   },
   "ENTR 456": {
     "credits": [
@@ -22445,7 +22445,7 @@
       3
     ],
     "title": "High Technology Entrepreneurship",
-    "group": null,
+    "group": "D",
     "dle": false,
     "fys": false,
     "multicultural": false,
@@ -22457,7 +22457,7 @@
     ],
     "title": "Corporate Innovation & Intrapreneurship",
     "group": null,
-    "dle": false,
+    "dle": true,
     "fys": false,
     "multicultural": false,
     "capstone": false
@@ -22534,7 +22534,7 @@
       3
     ],
     "title": "Introduction to Environmental Science",
-    "group": null,
+    "group": "D",
     "dle": false,
     "fys": false,
     "multicultural": false,
@@ -22839,7 +22839,7 @@
       3
     ],
     "title": "Climate Fiction, Science, and Communication",
-    "group": null,
+    "group": "A",
     "dle": false,
     "fys": false,
     "multicultural": false,
@@ -22872,7 +22872,7 @@
       3
     ],
     "title": "Foundations for Fashion Innovation",
-    "group": null,
+    "group": "A",
     "dle": false,
     "fys": false,
     "multicultural": false,
@@ -23708,7 +23708,7 @@
     ],
     "title": "Trust Management Symposium",
     "group": null,
-    "dle": false,
+    "dle": true,
     "fys": false,
     "multicultural": false,
     "capstone": true
@@ -24475,7 +24475,7 @@
       3
     ],
     "title": "Introduction to Game Studies",
-    "group": null,
+    "group": "A",
     "dle": false,
     "fys": false,
     "multicultural": false,
@@ -24486,7 +24486,7 @@
       3
     ],
     "title": "Videogames and Japanese Culture",
-    "group": null,
+    "group": "A",
     "dle": false,
     "fys": false,
     "multicultural": false,
@@ -24497,10 +24497,10 @@
       3
     ],
     "title": "Videogames and Latin American Culture",
-    "group": null,
+    "group": "A",
     "dle": false,
     "fys": false,
-    "multicultural": false,
+    "multicultural": true,
     "capstone": false
   },
   "GAME 401": {
@@ -24511,7 +24511,7 @@
     ],
     "title": "Game Studies and eSports Internship",
     "group": null,
-    "dle": false,
+    "dle": true,
     "fys": false,
     "multicultural": false,
     "capstone": false
@@ -24525,7 +24525,7 @@
     "dle": false,
     "fys": false,
     "multicultural": false,
-    "capstone": false
+    "capstone": true
   },
   "GEOG 101": {
     "credits": [
@@ -25629,7 +25629,7 @@
       3
     ],
     "title": "Life's a Beach: Geological Processes & Living with the Coast",
-    "group": "D",
+    "group": null,
     "dle": false,
     "fys": false,
     "multicultural": false,
@@ -26935,10 +26935,10 @@
       3
     ],
     "title": "Global Health and Healthcare",
-    "group": null,
+    "group": "C",
     "dle": false,
     "fys": false,
-    "multicultural": false,
+    "multicultural": true,
     "capstone": false
   },
   "HLTH 320": {
@@ -27419,10 +27419,10 @@
       3
     ],
     "title": "History of Modern Asia",
-    "group": null,
+    "group": "B",
     "dle": false,
     "fys": false,
-    "multicultural": false,
+    "multicultural": true,
     "capstone": false
   },
   "HIST 145": {
@@ -27669,10 +27669,10 @@
       3
     ],
     "title": "Race and Racism: Global History and Representation",
-    "group": null,
+    "group": "B",
     "dle": false,
     "fys": false,
-    "multicultural": false,
+    "multicultural": true,
     "capstone": false
   },
   "HIST 227": {
@@ -28149,10 +28149,10 @@
       3
     ],
     "title": "Black Women's History Since 1865",
-    "group": "B",
+    "group": null,
     "dle": false,
     "fys": false,
-    "multicultural": true,
+    "multicultural": false,
     "capstone": false
   },
   "HIST 335": {
@@ -28701,7 +28701,7 @@
     "group": "B",
     "dle": false,
     "fys": false,
-    "multicultural": false,
+    "multicultural": true,
     "capstone": false
   },
   "HIST 389": {
@@ -28874,10 +28874,10 @@
       3
     ],
     "title": "Race & Inequality in Delaware",
-    "group": null,
+    "group": "B",
     "dle": false,
     "fys": false,
-    "multicultural": false,
+    "multicultural": true,
     "capstone": false
   },
   "HIST 463": {
@@ -29923,10 +29923,10 @@
       3
     ],
     "title": "Racial Identity, Bias and the Self",
-    "group": null,
+    "group": "B",
     "dle": false,
     "fys": false,
-    "multicultural": false,
+    "multicultural": true,
     "capstone": false
   },
   "HDFS 220": {
@@ -32275,7 +32275,7 @@
       4
     ],
     "title": "Human Anatomy and Physiology I",
-    "group": null,
+    "group": "D",
     "dle": false,
     "fys": false,
     "multicultural": false,
@@ -32286,7 +32286,7 @@
       4
     ],
     "title": "Human Anatomy & Physiology II",
-    "group": null,
+    "group": "D",
     "dle": false,
     "fys": false,
     "multicultural": false,
@@ -32490,7 +32490,7 @@
     "dle": false,
     "fys": false,
     "multicultural": false,
-    "capstone": false
+    "capstone": true
   },
   "KAAP 442": {
     "credits": [
@@ -32501,7 +32501,7 @@
     "dle": false,
     "fys": false,
     "multicultural": false,
-    "capstone": false
+    "capstone": true
   },
   "KAAP 444": {
     "credits": [
@@ -32783,7 +32783,7 @@
       3
     ],
     "title": "Introduction to Surveying",
-    "group": null,
+    "group": "D",
     "dle": false,
     "fys": false,
     "multicultural": false,
@@ -33561,7 +33561,7 @@
       3
     ],
     "title": "Videogames and Japanese Culture",
-    "group": "A",
+    "group": null,
     "dle": false,
     "fys": false,
     "multicultural": false,
@@ -33572,7 +33572,7 @@
       3
     ],
     "title": "Videogames and Latin American Culture",
-    "group": "A",
+    "group": null,
     "dle": false,
     "fys": false,
     "multicultural": false,
@@ -35561,7 +35561,7 @@
       3
     ],
     "title": "Understanding Climate Change",
-    "group": null,
+    "group": "D",
     "dle": false,
     "fys": false,
     "multicultural": false,
@@ -35710,10 +35710,10 @@
       3
     ],
     "title": "Marine Conservation",
-    "group": null,
+    "group": "C",
     "dle": false,
     "fys": false,
-    "multicultural": false,
+    "multicultural": true,
     "capstone": false
   },
   "MAST 382": {
@@ -36753,7 +36753,7 @@
     "dle": false,
     "fys": false,
     "multicultural": false,
-    "capstone": false
+    "capstone": true
   },
   "MATH 426": {
     "credits": [
@@ -38970,7 +38970,7 @@
     ],
     "title": "Curatorship and Collections Management",
     "group": null,
-    "dle": false,
+    "dle": true,
     "fys": false,
     "multicultural": false,
     "capstone": false
@@ -38981,7 +38981,7 @@
     ],
     "title": "Archives and Paper Collections: Curatorship and Management",
     "group": null,
-    "dle": false,
+    "dle": true,
     "fys": false,
     "multicultural": false,
     "capstone": false
@@ -38992,7 +38992,7 @@
     ],
     "title": "Museum Education and Interpretation",
     "group": null,
-    "dle": false,
+    "dle": true,
     "fys": false,
     "multicultural": false,
     "capstone": false
@@ -39003,7 +39003,7 @@
     ],
     "title": "Exhibitions",
     "group": null,
-    "dle": false,
+    "dle": true,
     "fys": false,
     "multicultural": false,
     "capstone": false
@@ -39982,7 +39982,7 @@
       3
     ],
     "title": "Jazz Theory and Improvisation I",
-    "group": null,
+    "group": "A",
     "dle": false,
     "fys": false,
     "multicultural": false,
@@ -40477,7 +40477,7 @@
       1
     ],
     "title": "Studio Ensemble",
-    "group": null,
+    "group": "A",
     "dle": false,
     "fys": false,
     "multicultural": false,
@@ -40488,7 +40488,7 @@
       1
     ],
     "title": "Still Breathing",
-    "group": null,
+    "group": "A",
     "dle": false,
     "fys": false,
     "multicultural": false,
@@ -40499,10 +40499,10 @@
       1
     ],
     "title": "Practical Studies in World Percussion",
-    "group": null,
+    "group": "A",
     "dle": false,
     "fys": false,
-    "multicultural": false,
+    "multicultural": true,
     "capstone": false
   },
   "MUSC 441": {
@@ -40819,10 +40819,10 @@
     ],
     "title": "Private Study in Jazz and Improvisation IV",
     "group": null,
-    "dle": false,
+    "dle": true,
     "fys": false,
     "multicultural": false,
-    "capstone": false
+    "capstone": true
   },
   "MUSC 484": {
     "credits": [
@@ -40901,7 +40901,7 @@
       2
     ],
     "title": "Global Improvisation",
-    "group": null,
+    "group": "A",
     "dle": false,
     "fys": false,
     "multicultural": false,
@@ -43309,7 +43309,7 @@
       3
     ],
     "title": "Philosophy of Law",
-    "group": null,
+    "group": "A",
     "dle": false,
     "fys": false,
     "multicultural": false,
@@ -43757,7 +43757,7 @@
       4
     ],
     "title": "Fundamentals of Physics with Biomedical Applications I",
-    "group": null,
+    "group": "D",
     "dle": false,
     "fys": false,
     "multicultural": false,
@@ -43768,7 +43768,7 @@
       4
     ],
     "title": "Fundamentals of Physics with Biomedical Applications II",
-    "group": null,
+    "group": "D",
     "dle": false,
     "fys": false,
     "multicultural": false,
@@ -43823,7 +43823,7 @@
       1
     ],
     "title": "Introductory Physics Laboratory I",
-    "group": null,
+    "group": "D",
     "dle": false,
     "fys": false,
     "multicultural": false,
@@ -43834,7 +43834,7 @@
       1
     ],
     "title": "Introductory Physics Laboratory II",
-    "group": null,
+    "group": "D",
     "dle": false,
     "fys": false,
     "multicultural": false,
@@ -43845,7 +43845,7 @@
       1
     ],
     "title": "Fundamentals of Physics Laboratory I",
-    "group": null,
+    "group": "D",
     "dle": false,
     "fys": false,
     "multicultural": false,
@@ -43856,7 +43856,7 @@
       1
     ],
     "title": "Fundamentials of Physics Laboratory II",
-    "group": null,
+    "group": "D",
     "dle": false,
     "fys": false,
     "multicultural": false,
@@ -44212,7 +44212,7 @@
       3
     ],
     "title": "Introduction to Sustainable Food Systems",
-    "group": null,
+    "group": "C",
     "dle": false,
     "fys": false,
     "multicultural": false,
@@ -44452,7 +44452,7 @@
       3
     ],
     "title": "Vegetables, Herbs, and Natural Plant Products",
-    "group": null,
+    "group": "D",
     "dle": false,
     "fys": false,
     "multicultural": false,
@@ -44889,7 +44889,7 @@
     "group": "C",
     "dle": false,
     "fys": false,
-    "multicultural": false,
+    "multicultural": true,
     "capstone": false
   },
   "POSC 240": {
@@ -45080,7 +45080,7 @@
       3
     ],
     "title": "Politics and the African-American Experience",
-    "group": null,
+    "group": "C",
     "dle": false,
     "fys": false,
     "multicultural": true,
@@ -45168,7 +45168,7 @@
       3
     ],
     "title": "Conspiracy Theories and Misinformation",
-    "group": null,
+    "group": "C",
     "dle": false,
     "fys": false,
     "multicultural": false,
@@ -45179,7 +45179,7 @@
       3
     ],
     "title": "Gender in American Campaigns and Elections",
-    "group": null,
+    "group": "C",
     "dle": false,
     "fys": false,
     "multicultural": false,
@@ -45223,7 +45223,7 @@
       3
     ],
     "title": "Policy, Politics and Urban America",
-    "group": null,
+    "group": "C",
     "dle": false,
     "fys": false,
     "multicultural": false,
@@ -45234,10 +45234,10 @@
       3
     ],
     "title": "Feminist Political Theory",
-    "group": null,
+    "group": "B",
     "dle": false,
     "fys": false,
-    "multicultural": false,
+    "multicultural": true,
     "capstone": false
   },
   "POSC 362": {
@@ -45459,10 +45459,10 @@
       3
     ],
     "title": "The International Relations of Asia",
-    "group": null,
+    "group": "C",
     "dle": false,
     "fys": false,
-    "multicultural": false,
+    "multicultural": true,
     "capstone": false
   },
   "POSC 413": {
@@ -45571,10 +45571,10 @@
       3
     ],
     "title": "The New Asia? The US, China, and a Changing East Asia",
-    "group": null,
+    "group": "C",
     "dle": false,
     "fys": false,
-    "multicultural": false,
+    "multicultural": true,
     "capstone": false
   },
   "POSC 423": {
@@ -45852,7 +45852,7 @@
       3
     ],
     "title": "Attitudes, Persuasion, and Political Propaganda",
-    "group": null,
+    "group": "C",
     "dle": false,
     "fys": false,
     "multicultural": false,
@@ -45885,10 +45885,10 @@
       3
     ],
     "title": "Politics of East Asian Development",
-    "group": null,
+    "group": "C",
     "dle": false,
     "fys": false,
-    "multicultural": false,
+    "multicultural": true,
     "capstone": false
   },
   "POSC 456": {
@@ -45896,7 +45896,7 @@
       3
     ],
     "title": "Social Movements in Fiction and Film",
-    "group": null,
+    "group": "C",
     "dle": false,
     "fys": false,
     "multicultural": false,
@@ -45982,7 +45982,7 @@
     "dle": true,
     "fys": false,
     "multicultural": false,
-    "capstone": true
+    "capstone": false
   },
   "POSC 466": {
     "credits": [
@@ -46186,10 +46186,10 @@
     ],
     "title": "Experiential Learning in Political Science & International Relations",
     "group": null,
-    "dle": false,
+    "dle": true,
     "fys": false,
     "multicultural": false,
-    "capstone": false
+    "capstone": true
   },
   "POSC 498": {
     "credits": [
@@ -49402,7 +49402,7 @@
       3
     ],
     "title": "Social Issues in Sport Through a 30 for 30 Lens",
-    "group": null,
+    "group": "C",
     "dle": false,
     "fys": false,
     "multicultural": false,
@@ -49691,10 +49691,10 @@
     ],
     "title": "Research Project",
     "group": null,
-    "dle": false,
+    "dle": true,
     "fys": false,
     "multicultural": false,
-    "capstone": false
+    "capstone": true
   },
   "STAT 470": {
     "credits": [
@@ -49968,7 +49968,7 @@
       3
     ],
     "title": "Fundamentals of Stagecraft",
-    "group": null,
+    "group": "A",
     "dle": false,
     "fys": false,
     "multicultural": false,
@@ -50067,8 +50067,8 @@
       3
     ],
     "title": "Advanced Healthcare Theatre Communication",
-    "group": null,
-    "dle": false,
+    "group": "A",
+    "dle": true,
     "fys": false,
     "multicultural": false,
     "capstone": false
@@ -51006,7 +51006,7 @@
       3
     ],
     "title": "Environmental Justice in Disasters",
-    "group": null,
+    "group": "C",
     "dle": false,
     "fys": false,
     "multicultural": false,
@@ -51050,7 +51050,7 @@
       3
     ],
     "title": "Civics and Economics for Teachers",
-    "group": null,
+    "group": "C",
     "dle": false,
     "fys": false,
     "multicultural": false,
@@ -51786,7 +51786,7 @@
     "group": "B",
     "dle": false,
     "fys": false,
-    "multicultural": false,
+    "multicultural": true,
     "capstone": false
   },
   "WOMS 201": {
@@ -51920,7 +51920,7 @@
     "group": null,
     "dle": false,
     "fys": false,
-    "multicultural": false,
+    "multicultural": true,
     "capstone": false
   },
   "WOMS 216": {
@@ -52158,7 +52158,7 @@
       3
     ],
     "title": "Gay and Lesbian Film",
-    "group": null,
+    "group": "C",
     "dle": false,
     "fys": false,
     "multicultural": false,
@@ -52580,7 +52580,7 @@
     "group": null,
     "dle": false,
     "fys": false,
-    "multicultural": false,
+    "multicultural": true,
     "capstone": false
   },
   "WOMS 342": {
@@ -52676,10 +52676,10 @@
       3
     ],
     "title": "Global Genders and Sexualities",
-    "group": null,
+    "group": "B",
     "dle": false,
     "fys": false,
-    "multicultural": false,
+    "multicultural": true,
     "capstone": false
   },
   "WOMS 360": {
