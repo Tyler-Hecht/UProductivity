@@ -9,19 +9,7 @@ Data collected will be loaded onto the courses.json file.
 """
 json_file = 'courses.json'
 
-url = "https://catalog.udel.edu/content.php?catoid=47&navoid=8868"
-page = requests.get(url)
-
-soup = BeautifulSoup(page.content, "html.parser")
-find_prefixes = soup.find(id="courseprefix")
-
 courses = {}
-
-# Finds the course_prefixes and adds it to the courses dictionary
-course_prefixes = find_prefixes.find_all("option")
-for course_prefix in course_prefixes:
-    if course_prefix.text != "All prefixes…":
-        courses[course_prefix.text] = []
 
 # Since there are 46 pages of courses, the program has to iterate through each page by manipulating the format of the
 # URL.
@@ -42,8 +30,9 @@ for i in range(1, 47):
     for find_course in find_courses:
         a = find_course.find("a")
         course_elements = a.text.split()
-        course_code = course_elements[0]
+        course_prefix = course_elements[0]
         course_num = course_elements[1]
+        course_code = course_prefix + " " + course_num
         title = course_elements[3:]
         course_title = ""
         for word in title:
@@ -89,7 +78,7 @@ for i in range(1, 47):
             num_credits.append(int(refined[credits_position + 1][0]))
 
         # Adds the course information to the courses dictionary
-        courses[course_code].append({"num": course_num, "credits": num_credits, "title": course_title})
+        courses[course_code] = {"credits": num_credits, "title": course_title}
 
 # Storing the courses dictionary on the json file
 with open(json_file, 'w') as file_object:
