@@ -20,14 +20,12 @@ for course in find_courses:
 # Opens the courses.json file and adds a dictionary indicating whether the class is a fys class
 with open('courses.json', 'r+') as file:
     data = json.load(file)
-for prefix in data:
-    courses = data[prefix]
-    for course in courses:
-        course_code = prefix + " " + course["num"]
-        if course_code in fys_courses:
-            course["fys"] = True
-        else:
-            course["fys"] = False
+
+for course in data:
+    if course in fys_courses:
+        data[course]["fys"] = True
+    else:
+        data[course]["fys"] = False
 
 with open("courses.json", 'w') as file_object:
     file_object.write(json.dumps(data, indent=2))
