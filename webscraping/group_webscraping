@@ -63,20 +63,17 @@ for course in find_courses:
 with open('courses.json', 'r+') as file:
     data = json.load(file)
 
-for prefix in data:
-    courses = data[prefix]
-    for course in courses:
-        course_code = prefix + " " + course["num"]
-        if course_code in a_courses:
-            course["group"] = "A"
-        elif course_code in b_courses:
-            course["group"] = "B"
-        elif course_code in c_courses:
-            course["group"] = "C"
-        elif course_code in d_courses:
-            course["group"] = "D"
-        else:
-            course["group"] = None
+for course in data:
+    if course in a_courses:
+        data[course]["group"] = "A"
+    elif course in b_courses:
+        data[course]["group"] = "B"
+    elif course in c_courses:
+        data[course]["group"] = "C"
+    elif course in d_courses:
+        data[course]["group"] = "D"
+    else:
+        data[course]["group"] = None
 
 with open("courses.json", 'w') as file_object:
     file_object.write(json.dumps(data, indent=2))
