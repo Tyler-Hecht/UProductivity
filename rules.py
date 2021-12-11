@@ -56,9 +56,3 @@ courses_taken = {"HIST 304": 4}
 
 # testing
 print(check_group(courses_taken, "B"))
-
-for course in courses_list:
-    if courses_list[course]["dle"]:
-            if courses_list[course]["multicultural"]:
-                if courses_list[course]["group"] == "B":
-                    print(course)
