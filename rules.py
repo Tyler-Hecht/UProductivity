@@ -41,6 +41,8 @@ def check_cs_requirements(courses_taken: {str: dict}) -> [list]:
     for course_number in ["108", "181", "210", "220", "260", "275", "303", "320", "361", "372"]:
         course = "CISC " + course_number
         fulfilled_dict[course] = check_courses(courses_taken, [course])
+    # technical electives
+    fulfilled_dict["Technical electives"] = check_technical_electives(courses_taken)
     # stat sequence
     fulfilled_dict["MATH 205 or MATH 350"] = check_courses(courses_taken, ["MATH 205"]) or check_courses(courses_taken,
                                                                                                          ["MATH 350"])
@@ -78,7 +80,6 @@ def check_cs_requirements(courses_taken: {str: dict}) -> [list]:
             unfulfilled.append(requirement)
     return [fulfilled, unfulfilled]
 
-
 # helper functions
 def check_courses(courses_taken: {str: dict}, courses: [str]) -> bool:
     """
@@ -113,7 +114,6 @@ def check_FYS(courses_taken: {str: dict}) -> bool:
             fulfilled = True
     return fulfilled
 
-
 def check_DLE(courses_taken: {str: dict}) -> bool:
     """
     This function checks whether the Discovery Learning Experience requirement has been fulfilled
@@ -127,9 +127,8 @@ def check_DLE(courses_taken: {str: dict}) -> bool:
     credits = 0
     for course in courses_taken:
         if courses_list[course]["dle"]:
-            credits += courses_taken[course]["credits"]
+            credits += courses_taken[course]
     return credits >= 3
-
 
 def check_multicultural(courses_taken: {str: dict}) -> bool:
     """
@@ -144,9 +143,8 @@ def check_multicultural(courses_taken: {str: dict}) -> bool:
     credits = 0
     for course in courses_taken:
         if courses_list[course]["multicultural"]:
-            credits += courses_taken[course]["credits"]
+            credits += courses_taken[course]
     return credits >= 3
-
 
 def check_group(courses_taken: {str: dict}, group: str) -> bool:
     """
@@ -162,9 +160,8 @@ def check_group(courses_taken: {str: dict}, group: str) -> bool:
     credits = 0
     for course in courses_taken:
         if courses_list[course]["group"] == group and not courses_list[course]["coe"]:
-            credits += courses_taken[course]["credits"]
+            credits += courses_taken[course]
     return credits >= 3
-
 
 def check_capstone(courses_taken: {str: dict}) -> bool:
     """
@@ -179,9 +176,20 @@ def check_capstone(courses_taken: {str: dict}) -> bool:
     credits = 0
     for course in courses_taken:
         if courses_list[course]["capstone"]:
-            credits += courses_taken[course]["credits"]
+            credits += courses_taken[course]
     return credits >= 3
 
+def check_technical_electives(courses_taken: {str: dict}) -> bool:
+    vip_credits = 0
+    credits = 0
+    for course in courses_taken:
+        if (not course[-2:] == 87) or vip_credits < 3:
+            if (course[:4] == "CISC" and float(course[-3:]) >= 300) and (
+            not float(course[-3:]) in [303, 320, 361, 372, 355, 356, 357, 465, 366, 466]):
+                credits += courses_taken[course]
+                if course[-2:] == 87:
+                    vip_credits += courses_taken[course]
+            
 
 def check_electives(courses_taken: {str: dict}) -> bool:
     """
@@ -195,9 +203,8 @@ def check_electives(courses_taken: {str: dict}) -> bool:
     """
     credits = 0
     for course in courses_taken:
-        credits += courses_taken[course]["credits"]
+        credits += courses_taken[course]
     return credits >= 124
-
 
 def check_college_reqs(courses_taken: {str: dict}) -> bool:
     """
@@ -217,20 +224,19 @@ def check_college_reqs(courses_taken: {str: dict}) -> bool:
         if (not courses_list[course]["pcp"]) or pcp_credits <= 6:
             # must be from university breadth courses or COE breadth courses
             if courses_list[course]["group"] in ["A", "B", "C"] or (courses_list[course]["coe"] and courses_list[course]["group"] != "D"):
-                credits += courses_taken[course]["credits"]
+                credits += courses_taken[course]
                 # keep track of how many PCP credits have been taken
                 if courses_list[course]["pcp"]:
-                    pcp_credits += courses_taken[course]["credits"]
+                    pcp_credits += courses_taken[course]
                 # upper-level courses
                     if (courses_list[course]["group"] in ["A", "B", "C"] and float(course[-3:]) >= 300) or (
                     courses_list[course]["coe"] and courses_list[course]["group"] != "D" and float(course[-3:]) >= 300):
-                        upper_level_credits += courses_taken[course]["credits"]
+                        upper_level_credits += courses_taken[course]
 
         return credits >= 9 and upper_level_credits >= 6
 
-
 # example of courses taken
-courses_taken = {"CISC 108": {"credits": 3, "focus area": False, "approved math course": False}}
+courses_taken = {"CISC 108": 3}
 
 # testing
 print(check_cs_requirements(courses_taken))
