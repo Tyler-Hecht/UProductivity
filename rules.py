@@ -28,7 +28,7 @@ def check_cs_requirements(courses_taken: {str: dict}) -> [list]:
     # university requirements
     fulfilled_dict["ENGL 110"] = check_courses(courses_taken, ["ENGL 110"])
     fulfilled_dict["First year experience"] = check_FYS(courses_taken)
-    fulfilled_dict["Discover learning experience"] = check_DLE(courses_taken)
+    fulfilled_dict["Discovery learning experience"] = check_DLE(courses_taken)
     fulfilled_dict["Multicultural"] = check_multicultural(courses_taken)
     fulfilled_dict["Creative Arts and Humanities Breadth"] = check_group(courses_taken, "A")
     fulfilled_dict["History and Cultural Change Breadth"] = check_group(courses_taken, "B")
@@ -189,6 +189,7 @@ def check_technical_electives(courses_taken: {str: dict}) -> bool:
                 credits += courses_taken[course]
                 if course[-2:] == 87:
                     vip_credits += courses_taken[course]
+    return credits >= 6
             
 
 def check_electives(courses_taken: {str: dict}) -> bool:
@@ -236,7 +237,7 @@ def check_college_reqs(courses_taken: {str: dict}) -> bool:
         return credits >= 9 and upper_level_credits >= 6
 
 # example of courses taken
-courses_taken = {"CISC 108": 3}
+courses_taken = {"CISC 387": 3, "CISC 374": 3}
 
 # testing
 print(check_cs_requirements(courses_taken))
