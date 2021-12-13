@@ -180,6 +180,15 @@ def check_capstone(courses_taken: {str: dict}) -> bool:
     return credits >= 3
 
 def check_technical_electives(courses_taken: {str: dict}) -> bool:
+    """
+    This function checks whether the technical electives requirement has been fulfilled
+
+    Args:
+        courses_taken ({str: dict}): A dictionary containing every offered course as keys and a
+            dictionary with information about the course as values
+    Returns:
+        bool: Whether or not the technical electives requirement is fulfilled
+    """
     vip_credits = 0
     credits = 0
     for course in courses_taken:
@@ -200,7 +209,7 @@ def check_electives(courses_taken: {str: dict}) -> bool:
         courses_taken ({str: dict}): A dictionary containing every offered course as keys and a
             dictionary with information about the course as values
     Returns:
-        bool: Whether or not the electives requirement
+        bool: Whether or not the electives requirement is fulfilled
     """
     credits = 0
     for course in courses_taken:
