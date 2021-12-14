@@ -75,12 +75,13 @@ def check_cs_requirements(courses_taken: {str: dict}, functionality: str) -> Uni
     fulfilled_dict["CISC 355"] = check_courses(courses_taken, ["CISC 355"])[functionality]
     # electives
     fulfilled_dict["124 credits"] = check_electives(courses_taken)[functionality]
-    # return the dictionary as a list of two lists
-    fulfilled = []
-    unfulfilled = []
+    # if courses functionality
     if functionality == "courses":
         return fulfilled_dict
+    # if fulfilled functionality
     elif functionality == "fulfilled":
+        fulfilled = []
+        unfulfilled = []
         for requirement in fulfilled_dict:
             if fulfilled_dict[requirement]:
                 fulfilled.append(requirement)
@@ -220,11 +221,13 @@ def check_technical_electives(courses_taken: {str: dict}) -> dict:
     vip_credits = 0
     credits = 0
     for course in courses_taken:
+        # VIP credits can't exceed 3
         if (not course[-2:] == 87) or vip_credits < 3:
             if (course[:4] == "CISC" and float(course[-3:]) >= 300) and (
             not float(course[-3:]) in [303, 320, 361, 372, 355, 356, 357, 465, 366, 466]):
                 credits += courses_taken[course]
                 fulfilled_by["courses"].append
+                # keep track of how many VIP credits have been taken
                 if course[-2:] == 87:
                     vip_credits += courses_taken[course]
     fulfilled_by["fulfilled"] = credits >= 6
@@ -233,13 +236,13 @@ def check_technical_electives(courses_taken: {str: dict}) -> dict:
 
 def check_electives(courses_taken: {str: dict}) -> bool:
     """
-    This function checks whether the electives requirement has been fulfilled
+    This function checks whether the 124 credits requirement has been fulfilled
 
     Args:
         courses_taken ({str: dict}): A dictionary containing every offered course as keys and a
             dictionary with information about the course as values
     Returns:
-        bool: Whether or not the electives requirement is fulfilled
+        bool: A dictionary saying if and how the 124 credits requirement was fulfilled
     """
     fulfilled_by = {"courses": []}
     credits = 0
@@ -258,7 +261,7 @@ def check_college_reqs(courses_taken: {str: dict}) -> dict:
         courses_taken ({str: dict}): A dictionary containing every offered course as keys and a
             dictionary with information about the course as values
     Returns:
-        dict: A dictionary saying if and how the college electives requirement was fulfilled
+        dict: A dictionary saying if and how the college requirement was fulfilled
     """
     fulfilled_by = {"courses": []}
     credits = 0
@@ -266,7 +269,7 @@ def check_college_reqs(courses_taken: {str: dict}) -> dict:
     upper_level_credits = 0
     for course in courses_taken:
         # PCP credits can't exceed 6
-        if (not courses_list[course]["pcp"]) or pcp_credits <= 6:
+        if (not courses_list[course]["pcp"]) or pcp_credits < 6:
             # must be from university breadth courses or COE breadth courses
             if courses_list[course]["group"] in ["A", "B", "C"] or (courses_list[course]["coe"] and courses_list[course]["group"] != "D"):
                 credits += courses_taken[course]
