@@ -9,13 +9,26 @@ Data collected will be loaded onto the courses.json file.
 """
 json_file = 'courses.json'
 
-courses = {}
+courses = {"": {
+    "credits": [
+      0
+    ],
+    "title": "",
+    "group": None,
+    "dle": False,
+    "fys": False,
+    "multicultural": False,
+    "capstone": False,
+    "coe": False,
+    "pcp": False
+  },}
 
 # Since there are 46 pages of courses, the program has to iterate through each page by manipulating the format of the
 # URL.
 first_half_of_url = "https://catalog.udel.edu/content.php?catoid=47&catoid=47&navoid=8868&filter%5Bitem_type%" \
                     "5D=3&filter%5Bonly_active%5D=1&filter%5B3%5D=1&filter%5Bcpage%5D="
 second_half_of_url = "#acalog_template_course_filter"
+
 
 for i in range(1, 47):
     url = first_half_of_url + str(i) + second_half_of_url
