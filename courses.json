@@ -1,4 +1,17 @@
 {
+  "": {
+    "credits": [
+      0
+    ],
+    "title": "",
+    "group": null,
+    "dle": false,
+    "fys": false,
+    "multicultural": false,
+    "capstone": false,
+    "coe": false,
+    "pcp": false
+  },
   "ACCT 166": {
     "credits": [
       1,
