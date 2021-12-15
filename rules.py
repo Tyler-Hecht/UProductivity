@@ -40,8 +40,12 @@ def check_cs_requirements(courses_taken: {str: dict}, functionality: str) -> Uni
     fulfilled_dict["Social and Behavioral Sciences Breadth"] = check_group(courses_taken, "C")[functionality]
     fulfilled_dict["Mathematics, Natural Sciences, and Technology Breadth"] = check_group(courses_taken, "D")[functionality]
     fulfilled_dict["Capstone"] = check_capstone(courses_taken)[functionality]
+    # create list of group breadth courses so there's no overlap with COE fulfillment
+    breadth_courses = []
+    for group in ["A", "B", "C"]:
+        breadth_courses.append(check_group(courses_taken, group)["first"])
     # college requirements
-    fulfilled_dict["College of Engineering requirements"] = check_college_reqs(courses_taken)[functionality]
+    fulfilled_dict["College of Engineering requirements"] = check_college_reqs(courses_taken, breadth_courses)[functionality]
     # general CISC courses
     for course_number in ["108", "181", "210", "220", "260", "275", "303", "320", "361", "372"]:
         course = "CISC " + course_number
@@ -179,10 +183,15 @@ def check_group(courses_taken: {str: dict}, group: str) -> dict:
     Returns:
         dict: A dictionary saying if and how the breadth requirement was fulfilled
     """
-    fulfilled_by = {"courses": []}
+    fulfilled_by = {"courses": [], "first": ""}
     credits = 0
+    one_down = False
     for course in courses_taken:
         if courses_list[course]["group"] == group and not courses_list[course]["coe"]:
+            # makes this work with COE breadth requirements
+            if not one_down and group != "D":
+                one_down = True
+                fulfilled_by["first"] = course
             credits += courses_taken[course]
             fulfilled_by["courses"].append(course)
     fulfilled_by["fulfilled"] = credits >= 3
@@ -253,13 +262,15 @@ def check_electives(courses_taken: {str: dict}) -> bool:
     fulfilled_by["fulfilled"] = credits >= 124
     return fulfilled_by
 
-def check_college_reqs(courses_taken: {str: dict}) -> dict:
+def check_college_reqs(courses_taken: {str: dict}, breadth_courses: [str]) -> dict:
     """
     This function checks whether the College of Engineering requirement has been fulfilled
 
     Args:
         courses_taken ({str: dict}): A dictionary containing every offered course as keys and a
             dictionary with information about the course as values
+        breadth_courses ([str]): Courses that have already been used to fulfill university
+            breadth requirements
     Returns:
         dict: A dictionary saying if and how the college requirement was fulfilled
     """
@@ -269,7 +280,7 @@ def check_college_reqs(courses_taken: {str: dict}) -> dict:
     upper_level_credits = 0
     for course in courses_taken:
         # PCP credits can't exceed 6
-        if (not courses_list[course]["pcp"]) or pcp_credits < 6:
+        if ((not courses_list[course]["pcp"]) or pcp_credits < 6) and (course not in breadth_courses):
             # must be from university breadth courses or COE breadth courses
             if courses_list[course]["group"] in ["A", "B", "C"] or (courses_list[course]["coe"] and courses_list[course]["group"] != "D"):
                 credits += courses_taken[course]
