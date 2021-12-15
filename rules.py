@@ -226,7 +226,7 @@ def check_technical_electives(courses_taken: {str: dict}) -> dict:
             if (course[:4] == "CISC" and float(course[-3:]) >= 300) and (
             not float(course[-3:]) in [303, 320, 361, 372, 355, 356, 357, 465, 366, 466]):
                 credits += courses_taken[course]
-                fulfilled_by["courses"].append
+                fulfilled_by["courses"].append(course)
                 # keep track of how many VIP credits have been taken
                 if course[-2:] == 87:
                     vip_credits += courses_taken[course]
@@ -285,7 +285,7 @@ def check_college_reqs(courses_taken: {str: dict}) -> dict:
     return fulfilled_by
 
 # example of courses taken
-courses_taken = {"MATH 241": 4}
+courses_taken = {"GEOG 102": 3, "WOMS 210": 3}
 
 # testing
 print(check_cs_requirements(courses_taken, "fulfilled"))
