@@ -12,3 +12,12 @@ See UProductivity.md for a link to the web app.
 * Tyler Hecht (back-end coding)
 * Benita Abraham (web scraping)
 * Aparna Roy (front-end coding)
+
+**Future Directions:** 
+We will continue to make this web app better by...
+* Accounting for prerequisites and corequisites
+* Extending the app's functionality to more majors at the University of Delaware
+* Accounting for minors at the University of Delaware
+* Automatically selecting the corresponding number of credits for each course that the user inputs
+* Including an area to input transfer credits/courses (from high school or another college) and accounting for those
+* Improving the interface of the web app to make it more appealing
