@@ -6,6 +6,8 @@ College freshmen can have a difficult time figuring out their 4-year plan with a
 **Description of Project:** 
 This web app helps users (specifically Computer Science BS majors) create 4-year plans by allowing them to input courses they have taken, are taking, or are planning to take, and showing them the requirements they have fulfilled and those they haven't through an appealing and easy-to-understand interface.
 
+See UProductivity.md for a link to the web app.
+
 **Contributors:** 
 * Tyler Hecht (back-end coding)
 * Benita Abraham (web scraping)
