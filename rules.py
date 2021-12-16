@@ -20,6 +20,8 @@ def check_cs_requirements(courses_taken: {str: dict}, functionality: str) -> Uni
     Args:
         courses_taken ({str: dict}): A dictionary with each course taken as keys and information about the
             course as values
+        functionality (str): Whether the function will be used for checking requirement fulfillment
+            (use "fulfilled") or showing what courses count toward the requirements (use "courses")
     Returns:
         If functionality is "fulfilled":
             [[str]]: A list containing two lists: the first lists every fulfilled requirement and the
@@ -296,7 +298,7 @@ def check_college_reqs(courses_taken: {str: dict}, breadth_courses: [str]) -> di
     return fulfilled_by
 
 # example of courses taken
-courses_taken = {"GEOG 102": 3, "WOMS 210": 3}
+courses_taken = {"GEOG 102": 3, "PSYC 100": 3}
 
 # testing
 print(check_cs_requirements(courses_taken, "fulfilled"))
